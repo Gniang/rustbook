@@ -10,7 +10,7 @@ fn main() {
     let s1 = v1.into_boxed_slice();
 
     // 余分なメモリを持ってないことを確認するためにVec<i32>に戻す
-    let v2 = s1.into_vec();
+    let v2: Vec<i32> = s1.into_vec();
     println!("v1 len: {}, capacity: {}", v2.len(), v2.capacity());
     // →「v2 len: 5, capacity: 5」と表示される。5要素ぴったりのメモリを確保していることが分かる
 }

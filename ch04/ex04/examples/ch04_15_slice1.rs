@@ -1,7 +1,7 @@
 // この関数は&[char]型のスライスを引数に取り、その情報を表示する
 fn print_info(name: &str, sl: &[char]) {
     println!(
-        "  {:9} - {}, {:?}, {:?}, {:?}",
+        "  {:9} - {}, 1st:{:?}, 2nd:{:?}, End:{:?}",
         name,
         sl.len(),    // 長さ（バイト数）  usize型
         sl.first(),  // 最初の要素       Option<char>型
@@ -26,4 +26,7 @@ fn main() {
     print_info("&v1[..]",   &v1[..]);    // &[char]型。全要素のスライス
     print_info("&v1",       &v1);        // 同上
     print_info("&v1[1..3]", &v1[1..3]);  // &[char]型。'f'と'g'を要素とする長さ2のスライス
+
+    println!("{}", v1.len());
+    print_info("&v1[..]",   &v1[..v1.len()]);    // &[char]型。全要素のスライス
 }

@@ -19,5 +19,7 @@ fn main() {
     assert_eq!(m1.get("d"), Some(&7));
 
     #[allow(unused_variables)]
-    let m2 = vec![("a", 1), ("b", 3)].into_iter().collect::<HashMap<_, _>>();
+    let m2 = vec![("a", 1), ("b", 3), ("d", 7)].into_iter().collect::<HashMap<_, _>>();
+
+    assert_eq!(m1, m2);
 }

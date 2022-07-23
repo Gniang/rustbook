@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "ch03\\bitonic-sorter"
+		},
+		{
+			"path": "ch04\\ex04"
+		},
+		{
+			"path": "ch05\\ex05"
+		}
+	],
+	"settings": {}
+}
